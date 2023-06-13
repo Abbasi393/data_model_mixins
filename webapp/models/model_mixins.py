@@ -11,10 +11,6 @@ class NameModelMixin:
     name = nn_column(Text)
 
 
-def nn_column(*args, **kwargs):
-    return Column(nullable=False, *args, **kwargs)
-
-
 class TenantBasedModelMixin:
     @declared_attr
     def tenant_id(self):
