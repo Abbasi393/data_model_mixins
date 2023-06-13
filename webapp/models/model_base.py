@@ -1,4 +1,4 @@
-from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
 from sqlalchemy import Column, MetaData
 from sqlalchemy.ext.declarative import declarative_base
 
@@ -31,7 +31,10 @@ class AppModelBase(ModelBase):
         try:
             result = {}
             for c in self.__table__.columns:
-                result.update({c.name: getattr(self, c.name)})
+                col_value = getattr(self, c.name)
+                if c.type.python_type == datetime:
+                    col_value = str(col_value)
+                result.update({c.name: col_value})
             return result
         except Exception as ex:
             print(ex)

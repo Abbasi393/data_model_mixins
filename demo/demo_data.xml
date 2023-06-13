@@ -1,0 +1,31 @@
+<!-- demo_data.xml -->
+
+<demo_data>
+    <record model="tenant" id="tenant_1">
+        <field name="name">My Abc Company</field>
+        <field name="code">MAC-00001</field>
+        <field name="is_enabled">True</field>
+        <field name="is_verified">True</field>
+        <field name="verification_code">123456</field>
+    </record>
+    <record model="customer" id="customer_1">
+        <field name="name">John Doe</field>
+        <field name="address">123 Main St</field>
+        <field name="phone">555-1234</field>
+        <field name="email">johndoe@example.com</field>
+        <field name="tenant_id">1</field>
+        <field name="is_enabled">True</field>
+        <field name="created_on">2023-06-07T10:00:00</field>
+        <field name="created_by_id">1</field>
+    </record>
+    <record model="customer" id="customer_2">
+        <field name="name">Jane Smith</field>
+        <field name="address">456 Elm St</field>
+        <field name="phone">555-5678</field>
+        <field name="email">janesmith@example.com</field>
+        <field name="tenant_id">1</field>
+        <field name="is_enabled">True</field>
+        <field name="created_on">2023-06-07T11:00:00</field>
+        <field name="created_by_id">2</field>
+    </record>
+</demo_data>
